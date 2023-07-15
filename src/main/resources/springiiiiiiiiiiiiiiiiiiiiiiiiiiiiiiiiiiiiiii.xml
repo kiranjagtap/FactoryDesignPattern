@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean id="circle" class="org.example.Circle" scope="prototype">
+        <property name="radius" value="5"></property>
+    </bean>
+
+    <bean id="triangle" class="org.example.Triangle">
+        <property name="side1" value="5"></property>
+        <property name="side2" value="10"></property>
+        <property name="side3" value="20"></property>
+    </bean>
+
+    <bean id="drawShape" class="org.example.DrawShape">
+        <property name="shape">
+                <ref bean="triangle"></ref>
+        </property>
+    </bean>
+</beans>
